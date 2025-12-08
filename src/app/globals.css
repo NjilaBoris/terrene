@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
- @theme {
+@theme {
   --font-dm-mono: var(--font-dm-mono)
   --color-base-100: rgb(242, 237, 230);
   --color-base-200: rgb(204, 200, 194);
