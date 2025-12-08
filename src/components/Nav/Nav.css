@@ -1,0 +1,51 @@
+.link {
+  position: relative;
+  pointer-events: auto;
+}
+
+.link a h2 {
+  text-decoration: none;
+  color: var(--color-base-300);
+  font-size: 4rem;
+  line-height: 1.1;
+  pointer-events: auto;
+  transition: color 0.3s ease-out;
+}
+
+.link a h2:hover {
+  color: var(--color-base-100);
+}
+
+.socials .sub-col p {
+  position: relative;
+  margin-bottom: 0.25rem;
+}
+
+/* SplitText mask styles */
+.split-line {
+  overflow: hidden;
+  will-change: transform;
+  pointer-events: auto;
+}
+
+@media (max-width: 1000px) {
+  .link a h2 {
+    font-size: 2.25rem;
+    line-height: 1.2s;
+  }
+
+  .socials {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 10rem;
+  }
+
+  .socials .sub-col {
+    flex: 1;
+  }
+
+  .menu-commissions {
+    display: none;
+  }
+}
