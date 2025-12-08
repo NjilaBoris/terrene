@@ -9,7 +9,6 @@ import { useGSAP } from "@gsap/react";
 import { useViewTransition } from "@/hooks/useViewTransition";
 
 import { IoMdArrowForward } from "react-icons/io";
-import Link from "next/link";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -139,25 +138,11 @@ const AnimatedButton = ({
 
   const buttonContent = (
     <>
-      <span
-        className="circle group-hover:w-full relative block w-12 h-12 text-2xl overflow-hidden transition-[width] duration-500 
-      ease-[cubic-bezier(0.65,0,0.076,1)] m-0 rounded-[4rem] scale-0 bg-base-450"
-        ref={circleRef}
-        aria-hidden="true"
-      ></span>
-      <div
-        className="icon group-hover:translate-x-3 absolute text-base-200 text-2xl translate-x-0 transition-all
-       duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] will-change-transform left-[0.95rem] top-[0.775rem]"
-        ref={iconRef}
-      >
+      <span className="circle" ref={circleRef} aria-hidden="true"></span>
+      <div className="icon" ref={iconRef}>
         <IoMdArrowForward />
       </div>
-      <span
-        className="button-text group-hover:text-base-200 absolute -translate-x-2/4 -translate-y-2/4 text-center
-         text-base-500 font-semibold leading-none whitespace-nowrap transition-all duration-500
-       ease-[cubic-bezier(0.65,0,0.076,1)] ml-5 mr-0 my-0 left-2/4 top-2/4"
-        ref={textRef}
-      >
+      <span className="button-text" ref={textRef}>
         {label}
       </span>
     </>
@@ -165,10 +150,9 @@ const AnimatedButton = ({
 
   if (route) {
     return (
-      <Link
+      <a
         href={route}
-        className="btn group relative inline-block w-48 h-auto text-[0.9rem] backdrop-blur-[10px] 
-    cursor-pointer mx-0 my-4 p-[0.15rem] bg-[#f2ede6bf] rounded-[4rem] border-[none] scale-0"
+        className="btn"
         ref={buttonRef}
         onClick={(e) => {
           e.preventDefault();
@@ -176,16 +160,12 @@ const AnimatedButton = ({
         }}
       >
         {buttonContent}
-      </Link>
+      </a>
     );
   }
 
   return (
-    <button
-      className="btn group relative inline-block w-48 h-auto text-[0.9rem] backdrop-blur-[10px] 
-    cursor-pointer mx-0 my-4 p-[0.15rem] bg-[#f2ede6bf] rounded-[4rem] border-[none] scale-0"
-      ref={buttonRef}
-    >
+    <button className="btn" ref={buttonRef}>
       {buttonContent}
     </button>
   );
