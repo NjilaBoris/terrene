@@ -1,0 +1,20 @@
+.menu-toggle:hover .hamburger,
+.menu-toggle.opened .hamburger {
+  opacity: 1;
+}
+
+.menu-bar[data-position="top"] {
+  transform: translateY(-3px);
+}
+
+.menu-bar[data-position="bottom"] {
+  transform: translateY(3px);
+}
+
+.menu-toggle.opened .menu-bar[data-position="top"] {
+  transform: translateY(0) rotate(45deg) scaleX(1.05);
+}
+
+.menu-toggle.opened .menu-bar[data-position="bottom"] {
+  transform: translateY(0) rotate(-45deg) scaleX(1.05);
+}

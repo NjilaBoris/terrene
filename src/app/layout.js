@@ -1,16 +1,16 @@
-import {
-  Geist,
-  Geist_Mono,
-} from "next/font/google";
+import { Manrope, DM_Mono } from "next/font/google";
 import "./globals.css";
+import ClientLayout from "@/client-layout";
+import TopBar from "@/components/TopBar/TopBar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manRope = Manrope({
+  variable: "--font-manrope-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmMono = DM_Mono({
+  weight: ["300", "400", "500"],
+  variable: "--font-dm-mono",
   subsets: ["latin"],
 });
 
@@ -19,15 +19,14 @@ export const metadata = {
   description: "An Awarrrd website",
 };
 
-export default function RootLayout({
-  children,
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${manRope.className} ${dmMono.variable} antialiased`}>
+        <ClientLayout>
+          <TopBar />
+          {children}
+        </ClientLayout>
       </body>
     </html>
   );
