@@ -15,6 +15,7 @@ import AnimatedButton from "@/components/AnimatedButton/AnimatedButton";
 
 import Copy from "@/components/Copy/Copy";
 import Image from "next/image";
+import FeaturedProjects from "@/components/FeaturedProjects/FeaturedProjects";
 
 let isInitialLoad = true;
 gsap.registerPlugin(ScrollTrigger, CustomEase);
@@ -227,7 +228,7 @@ export default function Home() {
       )}
       <Nav />
       <section className="hero">
-        <div className="hero-bg">
+        <div className="hero-bg ">
           <Image width={1000} height={1000} src="/home/hero.jpg" alt="" />
         </div>
         <div className="hero-gradient"></div>
@@ -376,7 +377,7 @@ export default function Home() {
             </Copy>
           </div>
         </div>
-        {/* <FeaturedProjects /> */}
+        <FeaturedProjects />
       </section>
       <section className="client-reviews-container">
         <div className="container">
