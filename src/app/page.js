@@ -17,6 +17,7 @@ import Copy from "@/components/Copy/Copy";
 import Image from "next/image";
 import FeaturedProjects from "@/components/FeaturedProjects/FeaturedProjects";
 import ClientReviews from "@/components/ClientReviews/ClientReviews";
+import CTAWindow from "@/components/CTAWindow/CTAWindow";
 
 let isInitialLoad = true;
 gsap.registerPlugin(ScrollTrigger, CustomEase);
@@ -447,13 +448,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <CTAWindow
+      <CTAWindow
         img="/home/home-cta-window.jpg"
         header="Terrene"
         callout="Spaces that breathe with time"
         description="Our approach is guided by rhythm, proportion, and light, allowing every environment to grow more meaningful as it is lived in."
       />
-      <ConditionalFooter /> */}
+      {/* <ConditionalFooter />  */}
     </>
   );
 }
