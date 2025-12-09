@@ -16,6 +16,7 @@ import AnimatedButton from "@/components/AnimatedButton/AnimatedButton";
 import Copy from "@/components/Copy/Copy";
 import Image from "next/image";
 import FeaturedProjects from "@/components/FeaturedProjects/FeaturedProjects";
+import ClientReviews from "@/components/ClientReviews/ClientReviews";
 
 let isInitialLoad = true;
 gsap.registerPlugin(ScrollTrigger, CustomEase);
@@ -384,7 +385,7 @@ export default function Home() {
           <div className="client-reviews-header-callout">
             <p>Voices from our spaces</p>
           </div>
-          {/* <ClientReviews /> */}
+          <ClientReviews />
         </div>
       </section>
       <section className="gallery-callout">
