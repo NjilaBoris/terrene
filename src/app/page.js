@@ -18,6 +18,7 @@ import Image from "next/image";
 import FeaturedProjects from "@/components/FeaturedProjects/FeaturedProjects";
 import ClientReviews from "@/components/ClientReviews/ClientReviews";
 import CTAWindow from "@/components/CTAWindow/CTAWindow";
+import ConditionalFooter from "@/components/ConditionalFooter/ConditionalFooter";
 
 let isInitialLoad = true;
 gsap.registerPlugin(ScrollTrigger, CustomEase);
@@ -454,7 +455,7 @@ export default function Home() {
         callout="Spaces that breathe with time"
         description="Our approach is guided by rhythm, proportion, and light, allowing every environment to grow more meaningful as it is lived in."
       />
-      {/* <ConditionalFooter />  */}
+      <ConditionalFooter />
     </>
   );
 }
